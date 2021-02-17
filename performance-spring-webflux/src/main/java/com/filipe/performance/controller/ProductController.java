@@ -2,6 +2,7 @@ package com.filipe.performance.controller;
 
 import java.math.BigDecimal;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -27,8 +28,8 @@ public class ProductController {
 		Product p3 = new Product(3, "Onion", "Onion Rings", new BigDecimal(5.25));
 		Product p4 = new Product(4, "Egg", "Fresh eggs", new BigDecimal(2.75));
 		Product p5 = new Product(5, "Coffee", "Black Coffee", new BigDecimal(3.20));
-		
-		products = List.of(p1, p2, p3, p4, p5);
+
+		products = Arrays.asList(new Product[]{p1, p2, p3, p4, p5});
 	}
 
 	@GetMapping
